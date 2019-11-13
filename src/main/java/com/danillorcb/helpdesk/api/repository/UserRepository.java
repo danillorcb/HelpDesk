@@ -6,5 +6,5 @@ import com.danillorcb.helpdesk.api.entity.User;
 
 public interface UserRepository extends MongoRepository<User, String> {
 
-	User findByEmailLikeIgnoreCase(String email);
+	User findByEmail(String email);
 }

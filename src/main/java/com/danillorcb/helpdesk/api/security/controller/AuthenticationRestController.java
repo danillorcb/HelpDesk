@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.danillorcb.helpdesk.api.entity.User;
-import com.danillorcb.helpdesk.api.security.jwt.JwtAuthenticationrRequest;
+import com.danillorcb.helpdesk.api.security.jwt.JwtAuthenticationRequest;
 import com.danillorcb.helpdesk.api.security.jwt.JwtTokenUtil;
 import com.danillorcb.helpdesk.api.security.model.CurrentUser;
 import com.danillorcb.helpdesk.api.service.UserService;
@@ -39,7 +39,7 @@ public class AuthenticationRestController {
 	private UserService userService;
 	
 	@PostMapping(value = "/api/auth")
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationrRequest authenticationrRequest) {
+	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequest authenticationrRequest) {
 		
 		final Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(

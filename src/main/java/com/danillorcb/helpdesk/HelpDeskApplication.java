@@ -1,4 +1,4 @@
-package com.danillorcb.helpdesk.api;
+package com.danillorcb.helpdesk;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
